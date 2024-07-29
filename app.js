@@ -13,6 +13,10 @@ const uri = process.env.MONGO_URI || "mongodb+srv://ahmadalik883:OAdgPVELU0OjIlm
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  tls: true,
+  tlsAllowInvalidCertificates: true,
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
