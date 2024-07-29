@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-const uri = process.env.MONGO_URI || "your-mongo-uri";
+const uri = "mongodb+srv://ahmadalik883:OAdgPVELU0OjIlmm@cluster0.z9igter.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
