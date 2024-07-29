@@ -80,7 +80,7 @@ app.post("/delete", async (req, res) => {
   res.redirect(req.body.list === "Today" ? '/' : '/' + req.body.list);
 });
 
-app.listen(process.env.PORT || 3000, async () => {
+app.listen(process.env.PORT, async () => {
   await connectToMongoDB();
   console.log("Server is listening on port 3000");
 });
